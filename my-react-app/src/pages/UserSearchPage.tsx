@@ -59,6 +59,7 @@ export const UserSearchPage = () => {
       {usersList && usersList.total_count === 0 && <div>No users found.</div>}
       {usersList && usersList.total_count > 0 && (
         <div>
+          <p>Total results: {usersList.total_count}</p>
           {usersList.items.map((user: GitHubUser) => (
             <UserCard
               key={user.id}
