@@ -67,7 +67,7 @@ export const UserSearchPage = () => {
               key={user.id}
               avatar={user.avatar_url}
               username={user.login}
-              to={`user-detail/${user.id}`}
+              to={`user-detail/${user.login}`}
             />
           ))}
         </div>
