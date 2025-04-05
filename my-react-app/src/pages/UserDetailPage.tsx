@@ -33,7 +33,7 @@ export const UserDetailPage = () => {
               description: string;
               forks: number;
             }) => (
-              <div className="page-section-col" key={repo.id}>
+              <div className="repo-unit" key={repo.id}>
                 <h3>{repo.name}</h3>
                 <ul>
                   <li>

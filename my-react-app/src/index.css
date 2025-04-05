@@ -76,6 +76,10 @@ a {
   }
 }
 
+ul {
+  list-style: none;
+}
+
 img {
   border-radius: var(--br-rounded);
 }
@@ -123,4 +127,14 @@ img {
   &:hover::before {
     width: 100%;
   }
+}
+
+.repo-unit {
+  max-width: 90vw;
+  width: 80ch;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 1rem;
 }
