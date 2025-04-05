@@ -9,7 +9,7 @@ import { UserDetailPage } from './pages/UserDetailPage';
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   { path: '/', element: <UserSearchPage /> },
-  { path: '/user-detail/:userId', element: <UserDetailPage /> },
+  { path: '/user-detail/:username', element: <UserDetailPage /> },
 ]);
 
 createRoot(document.getElementById('root')!).render(

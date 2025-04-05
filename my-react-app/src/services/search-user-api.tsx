@@ -18,5 +18,7 @@ export const fetchUsers = async (username: string) => {
     throw new Error('Network response was not ok');
   }
 
-  return response.json();
+  const data = await response.json();
+
+  return data;
 };
