@@ -1,3 +1,4 @@
+import styles from './UserCard.module.css';
 import { Link } from 'react-router-dom';
 
 interface UserCardProps {
@@ -8,9 +9,13 @@ interface UserCardProps {
 
 export const UserCard = ({ avatar, username, to }: UserCardProps) => {
   return (
-    <div>
+    <div className={styles.userCard}>
       <Link to={to}>
-        <img src={avatar} alt={`User avatar for ${username}`} />
+        <img
+          className={styles.userAvatar}
+          src={avatar}
+          alt={`User avatar for ${username}`}
+        />
       </Link>
       <h2>{username}</h2>
     </div>
