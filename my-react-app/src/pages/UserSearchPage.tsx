@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { SearchBar } from '../components/SearchBar';
+import { SearchBar } from '../components/SearchBar/SearchBar';
 import { fetchUsers, GitHubUser, UsersData } from '../services/search-user-api';
-import { UserCard } from '../components/UserCard';
+import { UserCard } from '../components/UserCard/UserCard';
 
 export const UserSearchPage = () => {
   const [searchParams, setSearchParams] = useSearchParams('');
@@ -47,19 +47,21 @@ export const UserSearchPage = () => {
 
   return (
     <div>
-      <div>
+      <div className="page-section page-section-col">
         <Link to={'/'} onClick={handleReset}>
-          <h1>User Search</h1>
+          <h1 className="gradient-hover">User Search</h1>
         </Link>
         <SearchBar onSearchChange={setQuery} value={query} />
-        <Link to="user-detail/1">Go to user detail</Link>
+
+        {/* <p>
+          <strong>Total results:</strong> {usersList.total_count}
+        </p> */}
       </div>
       {isLoading && <div>Loading...</div>}
       {isError && <div>Error loading users!</div>}
       {usersList && usersList.total_count === 0 && <div>No users found.</div>}
       {usersList && usersList.total_count > 0 && (
-        <div>
-          <p>Total results: {usersList.total_count}</p>
+        <div className="page-section page-section-row">
           {usersList.items.map((user: GitHubUser) => (
             <UserCard
               key={user.id}

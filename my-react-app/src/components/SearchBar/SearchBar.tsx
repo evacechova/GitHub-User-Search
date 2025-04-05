@@ -1,3 +1,5 @@
+import styles from './SearchBar.module.css';
+
 interface SearchBarProps {
   value: string;
   onSearchChange: (query: string) => void;
@@ -11,6 +13,7 @@ export const SearchBar = ({ value, onSearchChange }: SearchBarProps) => {
     <>
       <label>
         <input
+          className={styles.textInput}
           type="text"
           placeholder="Enter username"
           value={value}
