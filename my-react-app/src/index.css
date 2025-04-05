@@ -12,9 +12,6 @@
   /* fonts */
   --f-h1: clamp(2rem, 1.6rem + 2vw, 3.2rem);
   --f-h2: 2rem;
-  --f-h3: 0.875rem;
-  --f-p1: 1rem;
-  --f-p2: 0.875rem;
 
   /* shapes */
   --br-rounded: 10px;
@@ -67,6 +64,11 @@ h1 {
   line-height: calc(var(--f-h1) * 1.2);
 }
 
+h2 {
+  font-size: var(--f-h2);
+  line-height: calc(var(--f-h2) * 1.2);
+}
+
 a {
   color: var(--c-f-primary);
   text-decoration: none;
@@ -85,23 +87,6 @@ img {
 }
 
 /* CUSTOM GLOBAL STYLES */
-
-.f-h2 {
-  font-size: var(--f-h2);
-}
-
-.f-h3 {
-  font-size: var(--f-h3);
-}
-
-.f-p1 {
-  font-size: var(--f-p1);
-}
-
-.f-p2 {
-  font-size: var(--f-p2);
-}
-
 .f-link-md {
   font-weight: 700;
   font-size: 1.125rem;
