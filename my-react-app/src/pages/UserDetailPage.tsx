@@ -26,9 +26,26 @@ export const UserDetailPage = () => {
       <h2>Public repositories:</h2>
       <ul>
         {repos.length > 0 ? (
-          repos.map((repo: { id: number; name: string }) => (
-            <li key={repo.id}>{repo.name}</li>
-          ))
+          repos.map(
+            (repo: {
+              id: number;
+              name: string;
+              description: string;
+              forks: number;
+            }) => (
+              <div className="page-section-col" key={repo.id}>
+                <h3>{repo.name}</h3>
+                <ul>
+                  <li>
+                    <strong>Description:</strong> {repo.description}
+                  </li>
+                  <li>
+                    <strong>Forks:</strong> {repo.forks}
+                  </li>
+                </ul>
+              </div>
+            )
+          )
         ) : (
           <p>User has no public repositories.</p>
         )}
