@@ -1,10 +1,13 @@
 import { NavLink } from '../components/NavLink';
 import { useQuery } from '@tanstack/react-query';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import { fetchUserDetails } from '../services/user-details-api';
 
 export const UserDetailPage = () => {
   const { username } = useParams<{ username: string }>();
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get('query') ?? '';
+  const page = searchParams.get('page') ?? '1';
 
   const {
     data: repos,
@@ -21,7 +24,7 @@ export const UserDetailPage = () => {
 
   return (
     <div className="page-section page-section-col">
-      <NavLink />
+      <NavLink query={query} page={page} />
       <h1>User: {username}</h1>
       <h2>Public repositories:</h2>
       <ul>
