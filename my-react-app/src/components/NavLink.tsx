@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
 
-export const NavButton = () => {
+interface NavLinkProps {
+  query: string;
+  page: string;
+}
+
+export const NavLink = ({ query, page }: NavLinkProps) => {
   return (
     <Link
       className="gradient-hover f-link-md"
-      to="/"
+      to={`/?query=${query}&page=${page}`}
       aria-label="Back to search"
     >
       ← Back to Search

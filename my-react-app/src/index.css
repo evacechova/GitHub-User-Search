@@ -51,6 +51,17 @@
   border-radius: var(--br-rounded);
 }
 
+.page-section-xs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 90vw;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--br-rounded);
+}
+
 .page-section-row {
   flex-direction: row;
 }
@@ -122,4 +133,24 @@ img {
   flex-wrap: wrap;
   text-align: left;
   padding: 1rem;
+}
+
+.navbutton {
+  padding: 0.5rem 1rem;
+  min-width: 100px;
+  border: none;
+  border-radius: var(--br-rounded);
+  background-color: var(--c-neutral);
+  transition: var(--transition-prim);
+  &:disabled {
+    cursor: default;
+    &:hover,
+    &:focus {
+      background-color: var(--c-neutral);
+    }
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--c-neutral-hover);
+  }
 }
