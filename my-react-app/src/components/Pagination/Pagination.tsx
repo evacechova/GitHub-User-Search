@@ -26,8 +26,8 @@ export const Pagination: React.FC<PaginationProps> = ({
   };
 
   return (
-    <>
-      <div className="page-section page-section-row">
+    <div className="page-section-xs page-section-col">
+      <div className="page-section-xs">
         <p>
           <strong>Results:</strong> {totalResults}
         </p>
@@ -35,7 +35,7 @@ export const Pagination: React.FC<PaginationProps> = ({
           <strong>Pages:</strong> {totalPages}
         </p>
       </div>
-      <div className="page-section page-section-row">
+      <div className="page-section-xs">
         <PaginationButton
           direction="Previous"
           onClick={handlePrevious}
@@ -50,6 +50,6 @@ export const Pagination: React.FC<PaginationProps> = ({
           disabled={!!totalPages && currentPage >= totalPages}
         />
       </div>
-    </>
+    </div>
   );
 };
