@@ -1,3 +1,3 @@
 # GitHub-User-Search
 
-- practice project
+- practice project using: ReactQuery and CSS Modules
