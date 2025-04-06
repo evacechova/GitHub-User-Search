@@ -9,9 +9,9 @@ export interface UsersData {
   items: GitHubUser[];
 }
 
-export const fetchUsers = async (username: string) => {
+export const fetchUsers = async (username: string, page: number) => {
   const response = await fetch(
-    `https://api.github.com/search/users?q=${username}`
+    `https://api.github.com/search/users?q=${username}&page=${page}`
   );
 
   if (!response.ok) {

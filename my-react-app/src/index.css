@@ -123,3 +123,23 @@ img {
   text-align: left;
   padding: 1rem;
 }
+
+.navbutton {
+  padding: 0.5rem 1rem;
+  min-width: 100px;
+  border: none;
+  border-radius: var(--br-rounded);
+  background-color: var(--c-neutral);
+  transition: var(--transition-prim);
+  &:disabled {
+    cursor: default;
+    &:hover,
+    &:focus {
+      background-color: var(--c-neutral);
+    }
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--c-neutral-hover);
+  }
+}

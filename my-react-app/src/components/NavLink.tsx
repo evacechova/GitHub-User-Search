@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export const NavButton = () => {
+export const NavLink = () => {
   return (
     <Link
       className="gradient-hover f-link-md"

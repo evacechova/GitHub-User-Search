@@ -1,4 +1,4 @@
-import { NavButton } from '../components/NavButton';
+import { NavLink } from '../components/NavLink';
 import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
 import { fetchUserDetails } from '../services/user-details-api';
@@ -21,7 +21,7 @@ export const UserDetailPage = () => {
 
   return (
     <div className="page-section page-section-col">
-      <NavButton />
+      <NavLink />
       <h1>User: {username}</h1>
       <h2>Public repositories:</h2>
       <ul>
