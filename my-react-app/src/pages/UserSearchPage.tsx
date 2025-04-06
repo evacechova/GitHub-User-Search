@@ -22,6 +22,7 @@ export const UserSearchPage = () => {
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedQuery(query);
+      setPage(1);
     }, 500);
     return () => clearTimeout(handler);
   }, [query]);
